@@ -1,38 +1,295 @@
+html {
+  background: url("./backgroundgetme.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(29.8px);
+  -webkit-backdrop-filter: blur(14.8px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  /* From https://css.glass */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-container {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0.9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 800px) {
+  .top-container {
+    width: 50%;
+    padding: 50px;
+  }
+}
+@media (max-wodth: 800px) {
+  .top-container {
+    width: 90%;
+  }
+}
+.main-title {
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 800px) {
+  .main-title {
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+}
+.main-input {
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 100px;
+  box-shadow: rgba(100, 100, 111, 0.2) 10px 7px 29px 0px;
+}
+
+@media (min-width: 800px) {
+  .main-input {
+    padding: 20px 60px;
+    margin: 10px;
+    font-size: 1.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 800px) {
+  .main-input {
+    padding: 20px 20px;
+    font-size: 1.2rem;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.main-input:hover {
+  outline: 2px solid grey;
+}
+.main-input:focus {
+  outline: none;
+  outline: 2px solid grey;
 }
 
-@keyframes App-logo-spin {
+.card {
+  box-shadow: rgba(100, 100, 111, 0.2) 10px 7px 29px 0px;
+  background-color: white;
+  border-radius: 10px;
+  animation: cardAnim 2s ease-in-out;
+}
+
+/* .card:hover{
+  outline: 1px solid grey;
+} */
+@keyframes cardAnim {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+.mid-container {
+  margin: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-container {
+  max-width: 250px;
+  min-width: 250px;
+  height: 260px;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.food-img {
+  border-radius: 100%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.food-title {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  line-height: 0.9;
+}
+
+.cat-cou {
+  display: flex;
+  justify-content: center;
+}
+
+.country {
+  margin: 10px;
+  padding: 5px;
+  border: 1.4px solid grey;
+  border-radius: 100px;
+}
+
+.category {
+  margin: 10px;
+  padding: 5px;
+  border: 1.4px solid grey;
+  background: lightpink;
+  color: black;
+  border-radius: 100px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .d-container-all {
+    display: flex;
+  }
+
+  .recipe-d {
+    width: 50%;
+  }
+
+  .v-contents {
+    width: 30%;
+  }
+}
+
+.recipe-d {
+  padding: 30px;
+}
+
+.v-contents {
+  font-family: "Raleway", sans-serif;
+  padding: 30px;
+}
+
+.v-inside {
+  padding: 10px;
+}
+.recipe-inside {
+  padding: 30px;
+}
+
+.d-title {
+  font-family: "Ubuntu", sans-serif;
+}
+.instruction {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(65, 65, 65);
+}
+
+.s-title {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.ing-cont {
+  display: flex;
+  padding: 3px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.ing-amount {
+  background-color: rgb(108, 212, 108);
+  border: 0.5px solid green;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  padding: 2px;
+  margin-left: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.i-img {
+  width: 100%;
+}
+
+.in-img {
+  position: absolute;
+}
+
+@media (min-width: 800px) {
+  .in-img {
+    height: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .in-img {
+    height: 30px;
+  }
+}
+
+.me-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-top: 5px solid salmon;
+  font-family: "Raleway", sans-serif;
+}
+
+.d-hidden {
+  display: none;
+}
+.splash {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sp-img {
+  height: 20vh;
+  display: block;
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.myname {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
 }
